@@ -21,6 +21,11 @@
 		1D46594619541C2B00FA792B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D46592819541C2B00FA792B /* UIKit.framework */; };
 		1D46594E19541C2B00FA792B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D46594C19541C2B00FA792B /* InfoPlist.strings */; };
 		1D46595019541C2B00FA792B /* ControllerTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46594F19541C2B00FA792B /* ControllerTransitionsTests.m */; };
+		1D46595B19541C6500FA792B /* CRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46595A19541C6500FA792B /* CRSecondViewController.m */; };
+		1D46595E1954207000FA792B /* CRAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46595D1954207000FA792B /* CRAnimationTransition.m */; };
+		1D4659611954228900FA792B /* CRDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4659601954228900FA792B /* CRDismissAnimation.m */; };
+		1D4659641954394400FA792B /* CRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4659631954394400FA792B /* CRTabBarViewController.m */; };
+		1D46596719543B5100FA792B /* CRNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46596619543B5100FA792B /* CRNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		1D46594B19541C2B00FA792B /* ControllerTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControllerTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		1D46594D19541C2B00FA792B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D46594F19541C2B00FA792B /* ControllerTransitionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllerTransitionsTests.m; sourceTree = "<group>"; };
+		1D46595919541C6500FA792B /* CRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRSecondViewController.h; sourceTree = "<group>"; };
+		1D46595A19541C6500FA792B /* CRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRSecondViewController.m; sourceTree = "<group>"; };
+		1D46595C1954207000FA792B /* CRAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRAnimationTransition.h; sourceTree = "<group>"; };
+		1D46595D1954207000FA792B /* CRAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRAnimationTransition.m; sourceTree = "<group>"; };
+		1D46595F1954228900FA792B /* CRDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDismissAnimation.h; sourceTree = "<group>"; };
+		1D4659601954228900FA792B /* CRDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDismissAnimation.m; sourceTree = "<group>"; };
+		1D4659621954394400FA792B /* CRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTabBarViewController.h; sourceTree = "<group>"; };
+		1D4659631954394400FA792B /* CRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTabBarViewController.m; sourceTree = "<group>"; };
+		1D46596519543B5100FA792B /* CRNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationViewController.h; sourceTree = "<group>"; };
+		1D46596619543B5100FA792B /* CRNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,16 @@
 				1D46593A19541C2B00FA792B /* CRViewController.m */,
 				1D46593C19541C2B00FA792B /* Images.xcassets */,
 				1D46592B19541C2B00FA792B /* Supporting Files */,
+				1D46595919541C6500FA792B /* CRSecondViewController.h */,
+				1D46595A19541C6500FA792B /* CRSecondViewController.m */,
+				1D46595C1954207000FA792B /* CRAnimationTransition.h */,
+				1D46595D1954207000FA792B /* CRAnimationTransition.m */,
+				1D46595F1954228900FA792B /* CRDismissAnimation.h */,
+				1D4659601954228900FA792B /* CRDismissAnimation.m */,
+				1D4659621954394400FA792B /* CRTabBarViewController.h */,
+				1D4659631954394400FA792B /* CRTabBarViewController.m */,
+				1D46596519543B5100FA792B /* CRNavigationViewController.h */,
+				1D46596619543B5100FA792B /* CRNavigationViewController.m */,
 			);
 			path = ControllerTransitions;
 			sourceTree = "<group>";
@@ -250,9 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D46595E1954207000FA792B /* CRAnimationTransition.m in Sources */,
+				1D4659641954394400FA792B /* CRTabBarViewController.m in Sources */,
 				1D46593119541C2B00FA792B /* main.m in Sources */,
+				1D46596719543B5100FA792B /* CRNavigationViewController.m in Sources */,
 				1D46593519541C2B00FA792B /* CRAppDelegate.m in Sources */,
 				1D46593B19541C2B00FA792B /* CRViewController.m in Sources */,
+				1D4659611954228900FA792B /* CRDismissAnimation.m in Sources */,
+				1D46595B19541C6500FA792B /* CRSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,11 @@
 //
 
 #import "CRViewController.h"
+#import "CRSecondViewController.h"
+#import "CRAnimationTransition.h"
+#import "CRDismissAnimation.h"
 
-@interface CRViewController ()
+@interface CRViewController ()<UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -17,13 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(60, self.view.frame.size.height- 100, 200, 44)];
+    [btn setBackgroundColor:[UIColor redColor]];
+    [btn setTitle:@"Next" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(openNextViewController) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    
+    CRAnimationTransition *animationTransition = [[CRAnimationTransition alloc] init];
+    return animationTransition;
 }
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    CRDismissAnimation *dismissAnimation = [[CRDismissAnimation alloc] init];
+    
+    return dismissAnimation;
+}
+
+-  (void)openNextViewController {
+    CRSecondViewController *second = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
+    second.transitioningDelegate = self;
+    [self.navigationController pushViewController:second animated:YES];
+}
+
 
 @end
